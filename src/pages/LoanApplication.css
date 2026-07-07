@@ -1,0 +1,297 @@
+/* ==================== LOAN APPLICATION CONTAINER ==================== */
+.loan-app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+}
+
+/* ==================== HEADER ==================== */
+.app-header {
+  background: linear-gradient(135deg, #1e5a96 0%, #2b7abc 100%);
+  padding: 1rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  position: relative;
+}
+
+.app-back-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+  z-index: 10;
+}
+
+.app-back-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.app-logo-img {
+  width: 50px;
+  height: auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.app-logo {
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  position: absolute;
+  left: 50%;
+  bottom: 0.3rem;
+  transform: translateX(-50%);
+}
+
+.app-connect {
+  color: #DAA520;
+}
+
+/* ==================== MAIN CONTENT ==================== */
+.app-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.app-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  max-width: 500px;
+  width: 100%;
+  padding: 3rem 2.5rem;
+}
+
+.app-title {
+  font-size: 1.75rem;
+  color: #092950;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.app-subtitle {
+  color: #666;
+  text-align: center;
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+}
+
+/* ==================== PROGRESS BAR ==================== */
+.progress-bar {
+  height: 4px;
+  background: #e8e8e8;
+  border-radius: 2px;
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #092950 0%, #0f3a66 100%);
+  transition: width 0.3s ease;
+}
+
+/* ==================== FORM ==================== */
+.app-form {
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  color: #333;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.5px;
+}
+
+/* ==================== INPUT STYLING ==================== */
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.currency-symbol {
+  position: absolute;
+  left: 1rem;
+  color: #092950;
+  font-weight: 600;
+  font-size: 0.95rem;
+  pointer-events: none;
+}
+
+.form-input {
+  width: 100%;
+  padding: 1rem 1rem 1rem 3.5rem;
+  border: 2px solid #092950;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #333;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  font-weight: 500;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #DAA520;
+  box-shadow: 0 0 0 3px rgba(218, 165, 32, 0.1);
+}
+
+.form-input::placeholder {
+  color: #aaa;
+}
+
+/* ==================== SELECT STYLING ==================== */
+.form-select {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #092950;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #333;
+  background: white;
+  cursor: pointer;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  font-weight: 500;
+}
+
+.form-select:focus {
+  outline: none;
+  border-color: #DAA520;
+  box-shadow: 0 0 0 3px rgba(218, 165, 32, 0.1);
+}
+
+/* ==================== BUTTON GROUP ==================== */
+.button-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.btn-back,
+.btn-next {
+  flex: 1;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.btn-back {
+  background: #e8e8e8;
+  color: #555;
+}
+
+.btn-back:hover {
+  background: #d8d8d8;
+}
+
+.btn-next {
+  background: linear-gradient(135deg, #1e5a96 0%, #2b7abc 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(30, 90, 150, 0.2);
+}
+
+.btn-next:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(9, 41, 80, 0.3);
+}
+
+.btn-next:active {
+  transform: translateY(0);
+}
+
+/* ==================== FOOTER ==================== */
+.app-footer {
+  background: linear-gradient(135deg, #1e5a96 0%, #2b7abc 100%);
+  padding: 1rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.85rem;
+  border-top: 1px solid #e8e8e8;
+}
+
+.app-footer p {
+  margin: 0;
+}
+
+/* ==================== MOBILE RESPONSIVE ==================== */
+@media (max-width: 600px) {
+  .app-header {
+    padding: 1rem;
+  }
+
+  .app-logo {
+    font-size: 1rem;
+  }
+
+  .app-logo-img {
+    width: 40px;
+  }
+
+  .app-main {
+    padding: 1rem;
+  }
+
+  .app-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .app-title {
+    font-size: 1.5rem;
+  }
+
+  .button-group {
+    gap: 0.75rem;
+  }
+
+  .form-input,
+  .form-select {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+}
+
+@media (max-width: 480px) {
+  .app-header {
+    padding: 0.8rem;
+  }
+
+  .app-logo-img {
+    width: 40px;
+  }
+
+  .app-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .app-title {
+    font-size: 1.25rem;
+  }
+}

@@ -1,0 +1,437 @@
+.status-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* ==================== HEADER ==================== */
+.status-header {
+  background: linear-gradient(135deg, #1e5a96 0%, #2b7abc 100%);
+  padding: 0.8rem 1rem 1rem 1rem;
+  text-align: center;
+  color: white;
+  flex-shrink: 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 130px;
+}
+
+.status-logo-img {
+  width: 55px;
+  height: auto;
+  position: absolute;
+  left: 50%;
+  top: 0.8rem;
+  transform: translateX(-50%);
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.status-logo {
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  top: 4.5rem;
+  transform: translateX(-50%);
+}
+
+.status-gold {
+  color: #DAA520;
+}
+
+.status-subtitle {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  bottom: 0.5rem;
+  transform: translateX(-50%);
+  letter-spacing: 0.3px;
+}
+
+/* ==================== MAIN CONTENT ==================== */
+.status-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem 0.6rem;
+  overflow: hidden;
+}
+
+.status-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 6px 24px rgba(30, 90, 150, 0.1);
+  width: 100%;
+  max-width: 440px;
+  padding: 1.6rem 1.2rem;
+  max-height: 100%;
+  overflow-y: auto;
+}
+
+/* ==================== CONGRATULATION SECTION ==================== */
+.congratulation-section {
+  text-align: center;
+  padding: 0.8rem 0 1.2rem 0;
+  margin: 0 0 1.2rem 0;
+}
+
+.congratulation-icon {
+  font-size: 2.8rem;
+  margin: 0 0 0.8rem 0;
+  animation: celebrate 0.6s ease-out;
+}
+
+@keyframes celebrate {
+  0% {
+    transform: scale(0) rotate(-45deg);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1) rotate(10deg);
+  }
+  100% {
+    transform: scale(1) rotate(0);
+    opacity: 1;
+  }
+}
+
+.congratulation-title {
+  font-size: 1.6rem;
+  color: #1e5a96;
+  margin: 0 0 0.4rem 0;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+.congratulation-subtitle {
+  color: #777;
+  font-size: 0.92rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ==================== SECTION DIVIDER ==================== */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #DAA520, transparent);
+  margin: 1.3rem 0;
+  opacity: 0.6;
+}
+
+/* ==================== SECTION TITLE ==================== */
+.section-title {
+  font-size: 0.78rem;
+  color: #1e5a96;
+  margin: 0 0 0.9rem 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+/* ==================== LOAN DETAILS SECTION ==================== */
+.loan-details-section {
+  margin: 0 0 1.3rem 0;
+  padding: 1rem 1.1rem;
+  background: linear-gradient(135deg, #f7f9fc 0%, #eef2f7 100%);
+  border-radius: 12px;
+  border: 1px solid #e0e6ee;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid #e4e9f0;
+}
+
+.detail-item:last-child {
+  border-bottom: none;
+}
+
+.detail-label {
+  color: #667;
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+
+.detail-value {
+  color: #092950;
+  font-weight: 700;
+  font-size: 0.92rem;
+}
+
+/* ==================== HIGHLIGHTED DETAIL ITEM ==================== */
+.detail-item.highlight {
+  background: linear-gradient(135deg, rgba(9, 41, 80, 0.05) 0%, rgba(218, 165, 32, 0.08) 100%);
+  padding: 0.7rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid rgba(218, 165, 32, 0.3);
+  margin-top: 0.3rem;
+}
+
+.detail-value-highlight {
+  color: #DAA520;
+  font-weight: 800;
+  font-size: 1.1rem;
+  background: linear-gradient(135deg, #1e5a96, #DAA520);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ==================== APPLICATION INFO SECTION ==================== */
+.application-info-section {
+  margin: 0 0 1.3rem 0;
+  padding: 1rem 1.1rem;
+  background: #f7fafd;
+  border-radius: 12px;
+  border: 1px solid #dceaf5;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #e4edf5;
+}
+
+.info-item:last-child {
+  border-bottom: none;
+}
+
+.info-label {
+  color: #778;
+  font-weight: 500;
+  font-size: 0.8rem;
+}
+
+.info-value {
+  color: #333;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-align: right;
+  max-width: 55%;
+  word-break: break-word;
+}
+
+/* ==================== NEXT STEPS ==================== */
+.next-steps-section {
+  margin: 0 0 1.3rem 0;
+  padding: 1rem 1.1rem;
+  background: #fffbf2;
+  border-radius: 12px;
+  border: 1px solid rgba(218, 165, 32, 0.25);
+}
+
+.next-steps-text {
+  color: #666;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ==================== ACTION BUTTONS ==================== */
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin: 0 0 1rem 0;
+}
+
+.btn-secondary {
+  padding: 0.95rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  background: #f2f4f7;
+  color: #556;
+  border: 1px solid #dfe3e9;
+}
+
+.btn-secondary:hover {
+  background: #eaedf2;
+}
+
+.btn-secondary:active {
+  transform: scale(0.98);
+}
+
+/* ==================== INFO BOX ==================== */
+.info-box {
+  background: linear-gradient(135deg, #eef6ff 0%, #f3edff 100%);
+  border: 1px solid #d8ebfa;
+  border-radius: 10px;
+  padding: 0.9rem 1rem;
+  text-align: center;
+  margin-top: 0.8rem;
+}
+
+.info-box-text {
+  color: #444;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ==================== FOOTER ==================== */
+.status-footer {
+  background: linear-gradient(135deg, #1e5a96 0%, #2b7abc 100%);
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  padding: 0.6rem;
+  font-size: 0.65rem;
+  border-top: 1px solid #e8e8e8;
+  flex-shrink: 0;
+}
+
+.status-footer p {
+  margin: 0;
+}
+
+/* ==================== MOBILE RESPONSIVE ==================== */
+@media (max-height: 700px) {
+  .status-header {
+    padding: 0.6rem 1rem 0.8rem 1rem;
+    min-height: 120px;
+  }
+
+  .status-logo-img {
+    width: 46px;
+  }
+
+  .status-logo {
+    top: 3.8rem;
+    font-size: 1.15rem;
+  }
+
+  .status-card {
+    padding: 1.2rem 0.9rem;
+  }
+
+  .congratulation-section {
+    padding: 0.5rem 0 0.8rem 0;
+    margin: 0 0 0.8rem 0;
+  }
+
+  .congratulation-icon {
+    font-size: 2.2rem;
+  }
+
+  .congratulation-title {
+    font-size: 1.35rem;
+  }
+
+  .section-divider {
+    margin: 1rem 0;
+  }
+
+  .loan-details-section,
+  .application-info-section,
+  .next-steps-section {
+    padding: 0.8rem 0.9rem;
+    margin: 0 0 1rem 0;
+  }
+
+  .btn-secondary {
+    padding: 0.8rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .status-header {
+    padding: 0.6rem 1rem 0.8rem 1rem;
+    min-height: 120px;
+  }
+
+  .status-logo-img {
+    width: 46px;
+    top: 0.6rem;
+  }
+
+  .status-logo {
+    font-size: 1.1rem;
+    top: 3.7rem;
+  }
+
+  .status-card {
+    padding: 1.1rem 0.8rem;
+  }
+
+  .congratulation-section {
+    padding: 0.5rem 0 0.8rem 0;
+    margin: 0 0 0.8rem 0;
+  }
+
+  .congratulation-icon {
+    font-size: 2.2rem;
+  }
+
+  .congratulation-title {
+    font-size: 1.25rem;
+  }
+
+  .congratulation-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .section-title {
+    font-size: 0.72rem;
+  }
+
+  .loan-details-section,
+  .application-info-section,
+  .next-steps-section {
+    padding: 0.75rem 0.8rem;
+    margin: 0 0 1rem 0;
+  }
+
+  .detail-item {
+    padding: 0.5rem 0;
+  }
+
+  .detail-label,
+  .detail-value {
+    font-size: 0.78rem;
+  }
+
+  .info-item {
+    padding: 0.45rem 0;
+  }
+
+  .info-label,
+  .info-value {
+    font-size: 0.72rem;
+  }
+
+  .next-steps-text {
+    font-size: 0.78rem;
+  }
+
+  .btn-secondary {
+    padding: 0.85rem;
+    font-size: 0.78rem;
+  }
+
+  .info-box-text {
+    font-size: 0.72rem;
+  }
+}
